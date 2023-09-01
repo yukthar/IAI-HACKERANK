@@ -1,0 +1,13 @@
+from fractions import Fraction
+
+
+P_A = Fraction(1, 4)  
+P_not_A = Fraction(1, 2)  
+P_B_given_A = Fraction(1, 100)  
+P_B_given_not_A = Fraction(3, 100)  
+
+
+P_A_given_B = (P_B_given_A * P_A) / ((P_B_given_A * P_A) + (P_B_given_not_A * P_not_A))
+
+
+print(f"The probability that a defective pipe came from Plant 1 is {P_A_given_B.numerator}/{P_A_given_B.denominator}")
